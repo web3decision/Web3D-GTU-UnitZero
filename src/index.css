@@ -1,0 +1,543 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+}
+
+.App h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.App p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.menu {
+  background-color: #2c3e50;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  flex-direction: column;
+  color: #f5f7fa;
+}
+
+/* Glassmorphism Container */
+.glass-container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.glass-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* CreateFundRaising Positioning */
+.CreateFundRaising {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* FundRaisingList Positioning */
+.FundRaisingList {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* FundRaisingDetail Positioning */
+.FundRaisingDetail {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Buttons with Gradient and Hover Effects */
+button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Fields with Glassmorphism */
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 1rem;
+  }
+
+  .App h1 {
+    font-size: 2rem;
+  }
+
+  .App p {
+    font-size: 1rem;
+  }
+
+  .CreateFundRaising,
+  .FundRaisingList,
+  .FundRaisingDetail {
+    max-width: 100%;
+  }
+}
+
+/* ================CreateFundRaising Styles================== */
+.create-fund-raising {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.create-fund-raising h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fund-raising-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.form-input::placeholder {
+  color: #777;
+}
+
+.form-input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.3);
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-fund-raising {
+    padding: 1.5rem;
+  }
+
+  .create-fund-raising h2 {
+    font-size: 1.75rem;
+  }
+
+  .form-input {
+    padding: 0.75rem;
+  }
+
+  .submit-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* ===============FundRaisingList Styles================== */
+.fund-raising-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.fund-raising-list h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fund-raising-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fund-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fund-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
+}
+
+.fund-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.fund-content p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0 0;
+}
+
+.fund-arrow {
+  font-size: 1.5rem;
+  color: #6a11cb;
+  transition: transform 0.3s ease;
+}
+
+.fund-item:hover .fund-arrow {
+  transform: translateX(10px);
+  color: #2575fc;
+}
+
+/* Gradient Background for the List */
+.fund-raising-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
+  z-index: -1;
+  border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fund-raising-list {
+    padding: 1rem;
+  }
+
+  .fund-item {
+    padding: 1rem;
+  }
+
+  .fund-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .fund-content p {
+    font-size: 0.9rem;
+  }
+
+  .fund-arrow {
+    font-size: 1.25rem;
+  }
+}
+
+/* ===============FundRaisingDetail Styles================== */
+.fund-raising-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.fund-raising-detail h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fund-raising-detail .description {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fund-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.fund-stats .stat {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.fund-stats .stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fund-stats .stat span:first-child {
+  font-size: 0.9rem;
+  color: #777;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.fund-stats .stat span:last-child {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.action-section {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem;
+  margin: 20px 0px;
+  transition: all 0.3s ease;
+}
+
+.action-section:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.action-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.form-input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.3);
+}
+
+.action-button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.action-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.request-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  /* transition: all 0.3s ease; */
+}
+
+.request-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fund-raising-detail {
+    padding: 1.5rem;
+  }
+
+  .fund-stats {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .action-section {
+    padding: 1rem;
+  }
+}
+
+/* Additional CSS for Request Items and Actions */
+.request-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.request-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.request-item p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.request-item p:first-child {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.request-actions {
+  display: flex;
+  gap: 0.5rem;
+}
